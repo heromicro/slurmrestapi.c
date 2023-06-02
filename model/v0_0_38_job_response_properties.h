@@ -1,0 +1,252 @@
+/*
+ * v0_0_38_job_response_properties.h
+ *
+ * 
+ */
+
+#ifndef _v0_0_38_job_response_properties_H_
+#define _v0_0_38_job_response_properties_H_
+
+#include <string.h>
+#include "../external/cJSON.h"
+#include "../include/list.h"
+#include "../include/keyValuePair.h"
+#include "../include/binary.h"
+
+typedef struct v0_0_38_job_response_properties_t v0_0_38_job_response_properties_t;
+
+#include "v0_0_38_job_resources.h"
+
+
+
+typedef struct v0_0_38_job_response_properties_t {
+    char *account; // string
+    long accrue_time; //numeric
+    char *admin_comment; // string
+    int array_job_id; //numeric
+    int array_task_id; //numeric
+    int array_max_tasks; //numeric
+    char *array_task_string; // string
+    int association_id; //numeric
+    char *batch_features; // string
+    int batch_flag; //boolean
+    char *batch_host; // string
+    list_t *flags; //primitive container
+    char *burst_buffer; // string
+    char *burst_buffer_state; // string
+    char *cluster; // string
+    char *cluster_features; // string
+    char *command; // string
+    char *comment; // string
+    char *container; // string
+    int contiguous; //boolean
+    char *core_spec; // string
+    char *thread_spec; // string
+    char *cores_per_socket; // string
+    double billable_tres; //numeric
+    char *cpus_per_task; // string
+    char *cpu_frequency_minimum; // string
+    char *cpu_frequency_maximum; // string
+    char *cpu_frequency_governor; // string
+    char *cpus_per_tres; // string
+    int deadline; //numeric
+    int delay_boot; //numeric
+    char *dependency; // string
+    int derived_exit_code; //numeric
+    long eligible_time; //numeric
+    long end_time; //numeric
+    char *excluded_nodes; // string
+    int exit_code; //numeric
+    char *features; // string
+    char *federation_origin; // string
+    char *federation_siblings_active; // string
+    char *federation_siblings_viable; // string
+    list_t *gres_detail; //primitive container
+    int group_id; //numeric
+    int job_id; //numeric
+    struct v0_0_38_job_resources_t *job_resources; //model
+    char *job_state; // string
+    int last_sched_evaluation; //numeric
+    char *licenses; // string
+    int max_cpus; //numeric
+    int max_nodes; //numeric
+    char *mcs_label; // string
+    char *memory_per_tres; // string
+    char *name; // string
+    char *nodes; // string
+    int nice; //numeric
+    int tasks_per_core; //numeric
+    int tasks_per_socket; //numeric
+    int tasks_per_board; //numeric
+    int cpus; //numeric
+    int node_count; //numeric
+    int tasks; //numeric
+    int het_job_id; //numeric
+    char *het_job_id_set; // string
+    int het_job_offset; //numeric
+    char *partition; // string
+    int memory_per_node; //numeric
+    int memory_per_cpu; //numeric
+    int minimum_cpus_per_node; //numeric
+    int minimum_tmp_disk_per_node; //numeric
+    long preempt_time; //numeric
+    long pre_sus_time; //numeric
+    int priority; //numeric
+    list_t *profile; //primitive container
+    char *qos; // string
+    int reboot; //boolean
+    char *required_nodes; // string
+    int requeue; //boolean
+    long resize_time; //numeric
+    int restart_cnt; //numeric
+    char *resv_name; // string
+    char *shared; // string
+    list_t *show_flags; //primitive container
+    int sockets_per_board; //numeric
+    int sockets_per_node; //numeric
+    long start_time; //numeric
+    char *state_description; // string
+    char *state_reason; // string
+    char *standard_error; // string
+    char *standard_input; // string
+    char *standard_output; // string
+    long submit_time; //numeric
+    long suspend_time; //numeric
+    char *system_comment; // string
+    long time_limit; //numeric
+    long time_minimum; //numeric
+    int threads_per_core; //numeric
+    char *tres_bind; // string
+    char *tres_freq; // string
+    char *tres_per_job; // string
+    char *tres_per_node; // string
+    char *tres_per_socket; // string
+    char *tres_per_task; // string
+    char *tres_req_str; // string
+    char *tres_alloc_str; // string
+    long user_id; //numeric
+    char *user_name; // string
+    char *wckey; // string
+    char *current_working_directory; // string
+
+} v0_0_38_job_response_properties_t;
+
+v0_0_38_job_response_properties_t *v0_0_38_job_response_properties_create(
+    char *account,
+    long accrue_time,
+    char *admin_comment,
+    int array_job_id,
+    int array_task_id,
+    int array_max_tasks,
+    char *array_task_string,
+    int association_id,
+    char *batch_features,
+    int batch_flag,
+    char *batch_host,
+    list_t *flags,
+    char *burst_buffer,
+    char *burst_buffer_state,
+    char *cluster,
+    char *cluster_features,
+    char *command,
+    char *comment,
+    char *container,
+    int contiguous,
+    char *core_spec,
+    char *thread_spec,
+    char *cores_per_socket,
+    double billable_tres,
+    char *cpus_per_task,
+    char *cpu_frequency_minimum,
+    char *cpu_frequency_maximum,
+    char *cpu_frequency_governor,
+    char *cpus_per_tres,
+    int deadline,
+    int delay_boot,
+    char *dependency,
+    int derived_exit_code,
+    long eligible_time,
+    long end_time,
+    char *excluded_nodes,
+    int exit_code,
+    char *features,
+    char *federation_origin,
+    char *federation_siblings_active,
+    char *federation_siblings_viable,
+    list_t *gres_detail,
+    int group_id,
+    int job_id,
+    v0_0_38_job_resources_t *job_resources,
+    char *job_state,
+    int last_sched_evaluation,
+    char *licenses,
+    int max_cpus,
+    int max_nodes,
+    char *mcs_label,
+    char *memory_per_tres,
+    char *name,
+    char *nodes,
+    int nice,
+    int tasks_per_core,
+    int tasks_per_socket,
+    int tasks_per_board,
+    int cpus,
+    int node_count,
+    int tasks,
+    int het_job_id,
+    char *het_job_id_set,
+    int het_job_offset,
+    char *partition,
+    int memory_per_node,
+    int memory_per_cpu,
+    int minimum_cpus_per_node,
+    int minimum_tmp_disk_per_node,
+    long preempt_time,
+    long pre_sus_time,
+    int priority,
+    list_t *profile,
+    char *qos,
+    int reboot,
+    char *required_nodes,
+    int requeue,
+    long resize_time,
+    int restart_cnt,
+    char *resv_name,
+    char *shared,
+    list_t *show_flags,
+    int sockets_per_board,
+    int sockets_per_node,
+    long start_time,
+    char *state_description,
+    char *state_reason,
+    char *standard_error,
+    char *standard_input,
+    char *standard_output,
+    long submit_time,
+    long suspend_time,
+    char *system_comment,
+    long time_limit,
+    long time_minimum,
+    int threads_per_core,
+    char *tres_bind,
+    char *tres_freq,
+    char *tres_per_job,
+    char *tres_per_node,
+    char *tres_per_socket,
+    char *tres_per_task,
+    char *tres_req_str,
+    char *tres_alloc_str,
+    long user_id,
+    char *user_name,
+    char *wckey,
+    char *current_working_directory
+);
+
+void v0_0_38_job_response_properties_free(v0_0_38_job_response_properties_t *v0_0_38_job_response_properties);
+
+v0_0_38_job_response_properties_t *v0_0_38_job_response_properties_parseFromJSON(cJSON *v0_0_38_job_response_propertiesJSON);
+
+cJSON *v0_0_38_job_response_properties_convertToJSON(v0_0_38_job_response_properties_t *v0_0_38_job_response_properties);
+
+#endif /* _v0_0_38_job_response_properties_H_ */
+
